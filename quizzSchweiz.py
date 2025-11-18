@@ -42,9 +42,6 @@ def main():
         print("Falsch")
         print(f"Die richtige Antwort ist: {richtigeAntwort}")
 
-
-  # print(SchweizerPassstrasse.items())
-
 if __name__ == '__main__':
     main()
 
