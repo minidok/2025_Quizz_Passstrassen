@@ -1,19 +1,18 @@
 from random import Random, choice
-import passstrassen
+from passstrassen import SchweizerPassstrasse
 
 def anzahlPassstrassen() -> int:
-    return len(passstrassen.SchweizerPassstrasse)
+    return len(SchweizerPassstrasse)
 
 def passAnfangEnde(von, nach):
-    for passname, passdaten in enumerate(passstrassen.SchweizerPassstrasse.items()):
-        if (passdaten['von'] == von and passdaten['nach'] == nach):
+    for passname, passdaten in SchweizerPassstrasse.items():
+        if passdaten['von'] == von and passdaten['nach'] == nach:
             return passname
-        else:
-            None
+    return None
         
 def passVonNach(von, nach) -> str:
     return next(
-        (passname for passname, passdaten in passstrassen.SchweizerPassstrasse.items()
+        (passname for passname, passdaten in SchweizerPassstrasse.items()
          if passdaten['von'] == von and passdaten['nach'] == nach),
         None
     )
@@ -23,7 +22,7 @@ def main():
     print(f"Grösse der DB: {anzahlPassstrassen()} Pässe sind eingetragen")
     print(passVonNach('Andermatt', 'Disentis'))
 
-    data = passstrassen.SchweizerPassstrasse
+    data = SchweizerPassstrasse
     data.keys()
 
     aPick = choice(list(data.keys()))
@@ -44,7 +43,7 @@ def main():
         print(f"Die richtige Antwort ist: {richtigeAntwort}")
 
 
-  # print(passstrassen.SchweizerPassstrasse.items())
+  # print(SchweizerPassstrasse.items())
 
 if __name__ == '__main__':
     main()
