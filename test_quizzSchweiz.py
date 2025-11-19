@@ -18,7 +18,7 @@ def test_list_length():
 
 from quizzSchweiz import anzahlPassstrassen, passVonNach
 def test_anzahlPassstrassen():
-    assert anzahlPassstrassen() > 0  # Assuming there is at least one pass in the database
+    assert anzahlPassstrassen() == 42
 
 def test_passVonNach():
-    assert passVonNach('Andermatt', 'Disentis') == 'Oberalppass'  # Example
+    assert passVonNach('Andermatt', 'Disentis') == 'Oberalppass' 

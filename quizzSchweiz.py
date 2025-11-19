@@ -21,7 +21,8 @@ def passVonNach(von, nach) -> str:
 def main():
     
     print(f"Grösse der DB: {anzahlPassstrassen()} Pässe sind eingetragen")
-    print(passVonNach('Andermatt', 'Disentis'))
+    # DEBUG: Ausgabe Oberalppass
+    #print(passVonNach('Andermatt', 'Disentis'))
 
     data = passstrassen.SchweizerPassstrasse
     data.keys()
@@ -29,7 +30,7 @@ def main():
     aPick = choice(list(data.keys()))
    
     print(f"Zufälliger Passname: {aPick}")
-    # DEBUG: print(data.get(aPick))
+    # DEBUG: print(data.get(aPick)) gibt einen ganzen Datensatz aus.
     print(data.get(aPick))
 
     print(f"In welchem Kanton, ist der Pass: {aPick} ?")
