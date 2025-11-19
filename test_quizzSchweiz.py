@@ -22,3 +22,4 @@ def test_anzahlPassstrassen():
 
 def test_passVonNach():
     assert passVonNach('Andermatt', 'Disentis') == 'Oberalppass' 
+    assert True
